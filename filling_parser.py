@@ -1,6 +1,6 @@
 import sys
 import os
-print(sys.version)
+#print(sys.version)
 from bs4 import BeautifulSoup
 
 class FillingParser(object):
@@ -44,7 +44,10 @@ def main():
     html_file_name = 'filing210669862.htm'
     html_file_path = os.path.join(webpage_dir, html_file_name)
     parser = FillingParser()
-    print(parser.get_total_annual_fund_operating_expenses_summary(html_file_path))
+    summary = parser.get_total_annual_fund_operating_expenses_summary(html_file_path)
+    print("Total annual Fund operating expenses after fee waiver and/or expense reimbursement:")
+    for key in summary:
+        print(key, '\t', summary[key])
     return 
 
 if __name__ == '__main__':
