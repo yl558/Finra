@@ -49,6 +49,18 @@ def main():
     for key in summary:
         print(key, '\t', summary[key])
     return 
+    '''
+    Sample output:
+
+    Total annual Fund operating expenses after fee waiver and/or expense reimbursement:
+    Class A      0.72%
+    Class A1     0.62%
+    Class C      1.12%
+    Class R      0.97%
+    Class R6     0.40%
+    Advisor Class    0.47%
+    
+    '''
 
 if __name__ == '__main__':
     main()
